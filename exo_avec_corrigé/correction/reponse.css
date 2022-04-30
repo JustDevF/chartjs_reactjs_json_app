@@ -1,0 +1,141 @@
+:root {
+    --navy: navy;
+    --gray: #F3F5FF;
+}
+
+body {
+    font-family: 'Outfit';
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    background-color: var(--navy);
+    padding: 15px 35px;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.btn:hover {
+    transform: scale(.95);
+}
+
+.btn.gray {
+    background-color: var(--gray);
+}
+
+.btn.blue {
+    background-color: var(--navy);
+    color: #fff;
+}
+
+.inner {
+    width: min(100%, 1000px);
+    margin: 0 auto;
+}
+
+header .cta {
+    display: flex;
+    gap: 10px;
+}
+
+header {
+    width: 100%;
+    background-color: rgba(255, 255, 255, .75);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    padding: 25px 5%;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, .05);
+    background-color:var(--gray);
+}
+
+header img {
+    height: 3em;
+    margin-right: 2em;
+}
+
+header :is(.inner, nav) {
+    display: flex;
+    align-items: center;
+}
+
+header .inner {
+    justify-content: space-between;
+}
+
+header nav {
+    align-items: center;
+    gap: 15px;
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+header nav a:hover {
+    opacity: .5;
+}
+
+header nav .cta {
+    margin-left: .5em;
+}
+
+main {
+    padding: 150px 0;
+    display: flex;
+    gap: 15px;
+}
+
+main .inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    grid-gap: 15px;
+}
+
+main .inner .box {
+    background-color: rgb(212, 212, 226);
+    padding: 7%;
+    box-sizing: border-box;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+main .inner .box:nth-child(1) {
+    grid-area: 1 / 1 / 3 / 3;
+    border-radius: 10px;
+    color: #fff;
+}
+
+main .inner .box:nth-child(1) .btn {
+    margin-top: 1em;
+    padding: 17px 35px;
+    border-radius: 7px;
+}
+
+main .inner .box:nth-child(2) { grid-area: 1 / 3 / 2 / 4; }
+main .inner .box:nth-child(3) { grid-area: 2 / 3 / 3 / 4; }
+main .inner .box:nth-child(4) { grid-area: 3 / 2 / 5 / 4; }
+main .inner .box:nth-child(5) { grid-area: 3 / 1 / 4 / 2; }
+main .inner .box:nth-child(6) { grid-area: 4 / 1 / 5 / 2; }
+
+main .inner .box h1 {
+    font-size: 1.5em;
+}
+
+main .inner .box:first-child h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+}
