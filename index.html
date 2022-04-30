@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Visualisation des données de l'environnement</title>
+  <title>pando2</title>
   <!-- Meta -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1 user-scalable=no">
 
-  <!-- Ajout du cdn chart.js -->
+  <!-- Ajout du cdn chart.js pour utiliser les graphiques-->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Style css -->
@@ -15,21 +15,44 @@
 
 <body>
   <!-- En-tête -->
-
+  <header>
+    <div class="inner">
+        <img src="./logo_pando.svg" alt="Pando2">
+        <nav>
+            <a href="">Accueil</a>
+            <div class="cta">
+                <div class="btn blue">Subscribe</div>
+            </div>
+        </nav>
+    </div>
+  </header>
   <!-- Le contenu du site -->
   <main>
-      <!--Statistiques -->
-    <section>
-      <div>
-            <div class="chart-container">
-                <h2>Données de chart.js </h2>
-                <canvas id="myChart" width="400" height="400"></canvas>
-            </div>
-      </div>
-    </section>
-  </main>
-    <!--Ajout du fichier js pour chart.js-->
-  <script type="module" src="main.js" defer></script>
+    <div class="inner">
+        <div class="box">
+            <canvas id="myChart" ></canvas>
+        </div>
+        <div class="box">
+          <div class="info">
+            <h2>Informations</h2>
+            <h3>Entreprise : Pando2</h3>
+            <p>Type de capteur : PandoSensors</p>
+            <p>Ville : Paris 75018</p>
+            <p>Adresse : 48 Rue René Clair 75018 Île-de-France France</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="info">
+            <p>Les types de pollution  de l'air : C02, HUM, TMP, VOCT </p>
+            <p>Période : 2021-11-01T00:04:04Z à 2021-11-01T23:54:23Z</p>
+            <p>Ville :  Paris </p>
+          </div>
+        </div>
+    </div>
+</main>
+
+  <!--Ajout du fichier js pour chart.js-->
+  <script src="main.js" defer></script>
     <!-- #Le contenu du site -->
 </body>
 </html>
